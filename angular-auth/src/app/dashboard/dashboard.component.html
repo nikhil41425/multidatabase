@@ -1,0 +1,43 @@
+<h1>Welcome You are loggedin!!</h1>
+
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content white-text">
+          <div class="row">
+            <div class="col s5">
+              <form #orderForm="ngForm" (ngSubmit)="onSubmit(orderForm)">
+                <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id"> -->
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="name" #name="ngModel" [(ngModel)]="order.name" placeholder="Enter Product" required>
+                    <!-- <label>Name :
+                      <label class="red-text">*</label>
+                    </label> -->
+                  </div>
+                </div><br>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="price" #name="ngModel" [(ngModel)]="order.price" placeholder="Enter Price">
+                    <!-- <label>Price :</label> -->
+                  </div>
+                </div><br>
+                
+                <div class="row">
+                  <div class="input-field col s12">
+                    <button class="btn btn-success right" type="submit" [disabled]="!orderForm.valid">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <p>{{product | json}}</p>
+  <!-- <p>{{product}}</p> -->
+
